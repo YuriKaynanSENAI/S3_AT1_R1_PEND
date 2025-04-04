@@ -1,35 +1,3 @@
-console.log("JS CONECTADO!"); // Apenas um log para verificar se o script está rodando corretamente
-
-// Classe base Funcionario
-class Funcionario {
-  constructor(nome, salario, dataAdmissao) {
-    this.nome = nome; // Nome do funcionário
-    this.salario = salario; // Salário do funcionário
-    this.dataAdmissao = dataAdmissao; // Data de admissão do funcionário
-    this.bonus = (salario * 10) / 100; // Calcula o bônus (10% do salário)
-  }
-
-  // Método para exibir o valor do bônus
-  calcularBonus() {
-    console.log(
-      `${this.nome} terá um bônus de 10% equivalente a R$${this.bonus.toFixed(
-        2
-      )}`
-    );
-  }
-
-  // Método para exibir os detalhes do funcionário
-  exibirDetalhes() {
-    console.log(
-      `Funcionário: ${this.nome}, salário: R$${this.salario.toFixed(
-        2
-      )}, foi admitido: ${this.dataAdmissao}, bônus de: R$${this.bonus.toFixed(
-        2
-      )}`
-    );
-  }
-}
-
 // Classe Gerente que herda de Funcionario
 class Gerente extends Funcionario {
   constructor(nome, salario, dataAdmissao, departamento) {
@@ -60,7 +28,7 @@ class Gerente extends Funcionario {
 }
 
 // Criando um objeto Gerente e chamando seus métodos
-const gerente = new Gerente("Alcindo", 1000, "01/04/2025", "TI");
+"Alcindo", 1000, "01/04/2025", "TI";
 gerente.calcularBonus(); // Exibe o bônus do gerente
 gerente.exibirDetalhes(); // Exibe os detalhes do gerente
 
